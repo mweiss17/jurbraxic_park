@@ -2,7 +2,6 @@ from datetime import datetime
 import functools
 import os
 
-from IPython.display import HTML, clear_output
 import jax
 import jax.numpy as jnp
 import matplotlib.pyplot as plt
@@ -12,11 +11,6 @@ import brax
 from brax import envs
 from brax.training import ppo, sac
 from brax.io import html
-
-if 'COLAB_TPU_ADDR' in os.environ:
-  from jax.tools import colab_tpu
-  colab_tpu.setup_tpu()
-
 
 env_name = "humanoid"  # @param ['ant', 'humanoid', 'fetch', 'grasp', 'halfcheetah', 'ur5e', 'reacher']
 env_fn = envs.create_fn(env_name=env_name)
