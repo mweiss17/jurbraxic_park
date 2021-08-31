@@ -7,12 +7,7 @@ import jax
 import jax.numpy as jnp
 import matplotlib.pyplot as plt
 
-try:
-  import brax
-except ImportError:
-  !pip install git+https://github.com/google/brax.git@main
-  clear_output()
-  import brax
+import brax
 
 from brax import envs
 from brax.training import ppo, sac
